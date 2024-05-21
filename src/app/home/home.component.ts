@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { environment } from '../../environments/environment';
+//import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +12,12 @@ import { environment } from '../../environments/environment';
 export class HomeComponent {
   public forecasts: WeatherForecast[] = [];
 
-  constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>(`${environment.baseUrl}weatherforecast`).subscribe({
-      next: result => this.forecasts = result,
-      error: e => console.error(e)
-    });
-  }
+  // constructor(http: HttpClient) {
+  //   http.get<WeatherForecast[]>(`${environment.baseUrl}weatherforecast`).subscribe({
+  //     next: result => this.forecasts = result,
+  //     error: e => console.error(e)
+  //   });
+  // }
 }
 
 interface WeatherForecast {
